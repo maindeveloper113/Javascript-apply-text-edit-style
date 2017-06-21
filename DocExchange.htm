@@ -696,56 +696,72 @@
                         <div class="slds-button-group">
                           <span class="slds-assistive-text" id="choose-font">Choose a Font</span>
                           <div class="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
-                            <button aria-describedby="choose-font" tabindex="0" aria-haspopup="true" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">Font
+                            <!--<button aria-describedby="choose-font" tabindex="0" aria-haspopup="true" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">Font
                               <svg class="slds-icon slds-icon--small" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                               </svg>
-                            </button>
+                            </button>-->
+                            <select name="font_style" id="font_style" aria-describedby="choose-font" title="Font" tabindex="0" aria-haspopup="true" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="fiat">Fiat</option>
+                              <option value="audi">Audi</option>
+                            </select>
                           </div>
                         </div>
                         <div class="slds-button-group">
                           <span class="slds-assistive-text" id="choose-size">Choose a Font Size</span>
                           <div class="slds-button-group slds-picklist slds-picklist--fluid slds-shrink-none">
-                            <button aria-describedby="choose-size" aria-haspopup="true" tabindex="-1" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">14
+                            <!--<button aria-describedby="choose-size" aria-haspopup="true" tabindex="-1" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">14
                               <svg class="slds-icon slds-icon--small" aria-hidden="true">
                                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                               </svg>
-                            </button>
+                            </button>-->
+                            <select name="font_size_style" id="font_size_style" aria-describedby="choose-size" title="Font size" aria-haspopup="true" tabindex="-1" class="slds-button slds-button--neutral slds-picklist__label slds-picklist__label--small">
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                            </select>
                           </div>
                         </div>
                       </div>
                       <ul aria-label="Format text" class="slds-button-group-list">
                         <li>
-                          <button class="slds-button slds-button--icon-border-filled" aria-describedby="bold" tabindex="-1" title="settings">
+                          <!--<button class="slds-button slds-button--icon-border-filled" aria-describedby="bold" tabindex="-1" title="settings">
                             <svg class="slds-button__icon" aria-hidden="true">
                               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#bold"></use>
                             </svg>
                             <span class="slds-assistive-text">Bold</span>
-                          </button>
+                          </button>-->
+                          <button type="button" name="bold_style" id="bold_style" style="font-weight: bold;" class="slds-button slds-button--icon-border-filled" aria-describedby="bold" tabindex="-1" title="Bold">B</button>
                         </li>
                         <li>
-                          <button class="slds-button slds-button--icon-border-filled" aria-describedby="italic" tabindex="-1" title="settings">
+                          <!--<button class="slds-button slds-button--icon-border-filled" aria-describedby="italic" tabindex="-1" title="settings">
                             <svg class="slds-button__icon" aria-hidden="true">
                               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#italic"></use>
                             </svg>
                             <span class="slds-assistive-text">Italic</span>
-                          </button>
+                          </button>-->
+                          <button type="button" name="italic_style" id="italic_style" style="font-style: italic;" class="slds-button slds-button--icon-border-filled" aria-describedby="italic" tabindex="-1" title="Italic">I</button>  
                         </li>
                         <li>
-                          <button class="slds-button slds-button--icon-border-filled" aria-describedby="underline" tabindex="-1" title="settings">
+                          <!--<button class="slds-button slds-button--icon-border-filled" aria-describedby="underline" tabindex="-1" title="settings">
                             <svg class="slds-button__icon" aria-hidden="true">
                               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#underline"></use>
                             </svg>
                             <span class="slds-assistive-text">Underline</span>
-                          </button>
+                          </button>-->
+                          <button type="button" name="underline_style" id="underline_style" style="text-decoration: underline;" class="slds-button slds-button--icon-border-filled" aria-describedby="underline" tabindex="-1" title="Underline">U</button>  
                         </li>
                         <li>
-                          <button class="slds-button slds-button--icon-border-filled" aria-describedby="strikethrough" tabindex="-1" title="settings">
+                          <!--<button class="slds-button slds-button--icon-border-filled" aria-describedby="strikethrough" tabindex="-1" title="settings">
                             <svg class="slds-button__icon" aria-hidden="true">
                               <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#strikethrough"></use>
                             </svg>
                             <span class="slds-assistive-text">Strike Through</span>
-                          </button>
+                          </button>-->
+                          <button type="button" name="strike_through_style" id="strike_through_style" style="text-decoration: line-through;" class="slds-button slds-button--icon-border-filled" aria-describedby="underline" tabindex="-1" title="Strikethrough">abc</button>  
                         </li>
                       </ul>
                       <ul aria-label="Format background &amp; text color" class="slds-button-group-list">
@@ -919,6 +935,74 @@
 <input id="txtShape" name="txtShape" type="hidden">
 <div id="bgModal" class="slds-backdrop slds-backdrop--open" style="display:none"></div>
 <script>
+    var bold_style = false;
+    var italic_style = false;
+    var underline_style = false;
+    var strike_through_style = false;
+
+    function selHTML() {
+
+        if (window.ActiveXObject) {
+            var c = document.selection.createRange();
+            return c.htmlText;
+        }
+
+        var nNd = document.createElement("span");
+        var w = getSelection().getRangeAt(0);
+        w.surroundContents(nNd);
+        return nNd.innerHTML;
+    }
+
+    $("#font_style").change(function() {
+        var val = $("#font_style").val();
+        alert('changed');
+    })
+    $("#font_size_style").change(function() {
+        var val = $("#font_size_style").val();
+        alert(val);
+    })
+    $("#bold_style").click(function() {
+        bold_style = !bold_style; 
+        if (bold_style) {
+            $(this).css("background-color", "#ccc");
+        }
+        else {
+            $(this).css("background-color", "white");
+        }
+        var selHtml =selHTML();
+        alert(selHtml);
+    });
+
+    $("#italic_style").click(function() {
+        italic_style = !italic_style; 
+        if (italic_style) {
+            $(this).css("background-color", "#ccc");
+        }
+        else {
+            $(this).css("background-color", "white");
+        }
+        
+    });
+    $("#underline_style").click(function() {
+        underline_style = !underline_style; 
+        if (underline_style) {
+            $(this).css("background-color", "#ccc");
+        }
+        else {
+            $(this).css("background-color", "white");
+        }
+    });
+    $("#strike_through_style").click(function() {
+        strike_through_style = !strike_through_style; 
+        if (strike_through_style) {
+            $(this).css("background-color", "#ccc");
+        }
+        else {
+            $(this).css("background-color", "white");
+        }
+    });    
+     
+
     $(".slds-section__title").click(function () {
        if($(this).parent().hasClass("slds-is-open"))
        {

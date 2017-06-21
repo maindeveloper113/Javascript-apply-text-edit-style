@@ -947,10 +947,13 @@
             return c.htmlText;
         }
 
-        var nNd = document.createElement("span");
+        //var nNd = document.createElement("span");
         var w = getSelection().getRangeAt(0);
-        w.surroundContents(nNd);
-        return nNd.innerHTML;
+        console.log('----', getSelection());
+      
+       // w.surroundContents(nNd);
+
+        //return nNd.innerHTML;
     }
 
     $("#font_style").change(function() {
@@ -1047,7 +1050,7 @@
                 //$(document).delegate('.slds-pill__remove','click',function(){ });
         
         
-        
+    
          $("#dvTxtContent").append('<div id="txtContent" name="txtContent" contenteditable="true" class="slds-text-color slds-grow">' +
                  txtContent + nTxtVal +'</div>');
          
